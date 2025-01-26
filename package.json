@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cms-changed": "pnpm --filter @kiralight/cms-main dev",
+    "cms-origin": "pnpm --filter @kiralight/cms-origin dev",
+    "build:cms-changed": "pnpm --filter @kiralight/cms-main build-only"
   },
   "keywords": [
     "pnpm-platform",
@@ -13,6 +15,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@changesets/cli": "^2.27.12"
+    "@changesets/cli": "^2.27.12",
+    "@kiralight/vue-component-cli": "^1.0.0"
   }
 }

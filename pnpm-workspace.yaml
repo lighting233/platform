@@ -2,4 +2,4 @@ packages:
   - "docs"
   - "test"
   - "apps/*"
-  - "packages/*"
+  - "packages/**"

@@ -124,8 +124,6 @@ const tableRef = ref();
 const selectedLists = ref([]);
 
 // 1.获取List数据,进行展示
-const usePageListQuery = usePageListQuery(props.actions.postPageListData)
-const { mutate: deleteItem } = useDeleteItem(props.actions.deleteItem, props.contentConfig.pageName)
 const {
     pageNO,
     pageCount,
@@ -136,7 +134,8 @@ const {
     updatePagination,
     updateSearchParams,
     reset
-} = usePageListQuery()
+} = usePageListQuery(props.actions.postPageListData)
+const { mutate: deleteItem } = useDeleteItem(props.actions.deleteItem, props.contentConfig.pageName)
 
 //为请求添加页面名称与url
 setPageName(props.contentConfig.pageName, props.contentConfig.pageListUrl)

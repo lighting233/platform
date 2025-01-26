@@ -28,7 +28,6 @@ import pageSearch from '@/components/page-search/page-search.vue'
 import pageContent from '@/components/page-content/page-content.vue'
 import { PageContentColada }  from '@kiralight/utils'
 import pageModal from '@/components/page-modal/page-modal.vue'
-import MyButton from '@Mycomponents/MyButton.vue'
 
 import searchConfig from './config/search.config'
 import contentConfig from './config/content.config'

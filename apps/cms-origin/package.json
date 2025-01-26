@@ -1,7 +1,6 @@
 {
-  "name": "cms-main-master",
+  "name": "@kiralight/cms-origin",
   "version": "0.0.0",
-  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
@@ -56,5 +55,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
