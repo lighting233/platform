@@ -1,5 +1,13 @@
 # @kiralight/cms-main
 
+## 1.1.1
+
+### Patch Changes
+
+- ffe506d: 修改 use 重复问题
+- Updated dependencies [ffe506d]
+  - @kiralight/utils@1.0.1
+
 ## 1.1.0
 
 ### Minor Changes
