@@ -1,0 +1,36 @@
+{
+  "name": "@kiralight/utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "utils",
+    "axios",
+    "components",
+    "element-plus",
+    "vue",
+    "pinia"
+  ],
+  "author": "lighting233",
+  "license": "MIT",
+  "homepage": "https://github.com/lighting233",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lighting233/utils"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "axios": "^1.6.8",
+    "@element-plus/icons-vue": "^2.3.1",
+    "element-plus": "^2.6.3",
+    "vue": "^3.4.21",
+    "pinia": "^2.1.7",
+    "@pinia/colada": "^0.13.3"
+  }
+}

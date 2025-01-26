@@ -1,0 +1,30 @@
+{
+  // 继承，大部分配置直接继承，所以这里配置项看起来比较少
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  // 需要编译的文件，手动添加ElementPlus自动引入插件生成的文件(添加后npm run build,这两个文件会自动更新即可生效，只对template中组件生效)
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "auto-imports.d.ts", "components.d.ts"],
+  "exclude": ["commitlint.config.js"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    // 主要是给vscode读取路径，编写代码时提示
+    "paths": {
+      "@/*": ["./src/*"]
+      // 为全局elementPuls组件提供类型声明
+      // "types": ["element-plus/global"]
+    },
+    // 不允许有隐式的any类型，默认true
+    // "noImplicitAny": true
+
+    // 建议开发环境配置
+
+    // 忽略5.0新特性
+    "ignoreDeprecations": "5.0"
+  },
+
+  // 引入，不建议自动生成后再去手动修改配置，想修改在node.json中修改
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}

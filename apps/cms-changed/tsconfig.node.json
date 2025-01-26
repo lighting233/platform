@@ -1,0 +1,13 @@
+{
+  // node SSR
+  "extends": "@vue/tsconfig/tsconfig.node.json",
+  // vite文件，需要基于node环境
+  "include": ["vite.config.*", "vitest.config.*", "cypress.config.*", "playwright.config.*"],
+  "compilerOptions": {
+    // composite：合成，文件引入tsconfig.json，被合并
+    "composite": true,
+    "types": ["node"],
+    // 忽略5.0新特性
+    "ignoreDeprecations": "5.0"
+  }
+}

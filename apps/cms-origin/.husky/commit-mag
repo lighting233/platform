@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# git commit 之前先执行以下命令，检查代码并自动格式化
+npx --no-install commitlint --edit

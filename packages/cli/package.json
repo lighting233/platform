@@ -1,0 +1,37 @@
+{
+  "name": "@kiralight/vue-component-cli",
+  "version": "1.0.0",
+  "description": "easy create component and router",
+  "main": "index.js",
+  "bin": {
+    "lt": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "cli",
+    "component",
+    "create"
+  ],
+  "author": "lighting233",
+  "license": "MIT",
+  "homepage": "https://github.com/lighting233",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lighting233/lt_vue_cli"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "commander": "^6.1.0",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.5",
+    "open": "^7.3.0"
+  }
+}

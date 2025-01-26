@@ -1,0 +1,36 @@
+# 忽略根目录的 node_modules
+/node_modules
+
+# 忽略所有子目录的 node_modules
+**/node_modules
+
+# 忽略 pnpm 的全局存储目录（可选）
+.pnpm-store
+
+# 忽略日志文件
+*.log
+
+# 忽略环境变量文件
+.env
+.env.local
+
+# 忽略 IDE 配置文件
+.vscode/
+.idea/
+
+# 忽略构建输出目录
+dist/
+build/
+out/
+
+# 忽略调试文件
+debug/
+*.pid
+
+# 忽略临时文件
+*.tmp
+*.temp
+
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db
