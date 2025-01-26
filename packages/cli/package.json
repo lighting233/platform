@@ -1,6 +1,6 @@
 {
   "name": "@kiralight/vue-component-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "easy create component and router",
   "main": "index.js",
   "bin": {

@@ -65,6 +65,39 @@ const createCommands = () => {
       addStore(name, program.dest || `src/store/${name}`)
     })
 
+  // 添加monorepo项目的新命令
+  program
+    .command('madd <name> <project>')
+    .description('add vue page for monorepo project, 例如: lt madd Home cms-changed [-d views]')
+    .action((name, project) => {
+      const defaultPath = `apps/${project}/src/views/${name}`;
+      add(name, program.dest ? `apps/${project}/src/${program.dest}` : defaultPath);
+    });
+
+  program
+    .command('maddAll <name> <project>')
+    .description('add vue page, router and store for monorepo project, 例如: lt maddAll Home cms-changed [-d views]')
+    .action((name, project) => {
+      const defaultPath = `apps/${project}/src/views/${name}`;
+      addAll(name, program.dest ? `apps/${project}/src/${program.dest}` : defaultPath);
+    });
+
+  program
+    .command('maddstore <name> <project>')
+    .description('add vue store for monorepo project, 例如: lt maddstore favor cms-changed [-d store]')
+    .action((name, project) => {
+      const defaultPath = `apps/${project}/src/store/${name}`;
+      addStore(name, program.dest ? `apps/${project}/src/${program.dest}` : defaultPath);
+    });
+
+  program
+    .command('maddcpn <name> <project>')
+    .description('add vue component for monorepo project, 例如: lt maddcpn NavBar cms-changed [-d components]')
+    .action((name, project) => {
+      const defaultPath = `apps/${project}/src/components`;
+      addComponent(name, program.dest ? `apps/${project}/src/${program.dest}` : defaultPath);
+    });
+
   program.command('test').action(() => {
     // terminal.spawn("npm", ['--version']);
     // terminal.exec("npm --version");
