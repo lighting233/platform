@@ -1,5 +1,11 @@
 # @kiralight/cms-main
 
+## 1.1.2
+
+### Patch Changes
+
+- 修改 cli 对 monorepo 的支持
+
 ## 1.1.1
 
 ### Patch Changes

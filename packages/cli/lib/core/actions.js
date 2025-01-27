@@ -33,9 +33,32 @@ const createProject = async (project, otherArg) => {
 const handleEjsToFile = async (name, dest, template, filename) => {
   // 1.获取模块引擎的路径
   const templatePath = path.resolve(__dirname, template);
-  const cpnPath = dest.replace('router', 'views').replace("src", "@") + `/${name}.vue`
-  const routePath = dest.replace('/router', '').replace('src', '')
-  const result = await ejsCompile(templatePath, {name, lowerName: name.toLowerCase(), cpnPath, routePath});
+  
+  // 处理路径，判断是否是monorepo项目（通过检查路径中是否包含apps/）
+  const isMonorepo = dest.includes('apps/');
+  let cpnPath, routePath;
+  
+  if (isMonorepo) {
+    // 对于monorepo项目，需要去掉apps/projectName前缀
+    const projectPath = dest.match(/apps\/[^/]+\//)[0];
+    cpnPath = dest.replace(projectPath + 'src', '@')
+                 .replace('router', 'views') + `/${name}.vue`;
+    routePath = dest.replace(projectPath + 'src', '')
+                   .replace('/router', '');
+  } else {
+    // 原有逻辑保持不变
+    cpnPath = dest.replace('router', 'views')
+                 .replace("src", "@") + `/${name}.vue`;
+    routePath = dest.replace('/router', '')
+                   .replace('src', '');
+  }
+
+  const result = await ejsCompile(templatePath, {
+    name, 
+    lowerName: name.toLowerCase(), 
+    cpnPath, 
+    routePath
+  });
 
   // 2.写入文件中
   // 判断文件不存在,那么就创建文件

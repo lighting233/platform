@@ -12,8 +12,8 @@ importers:
         specifier: ^2.27.12
         version: 2.27.12
       '@kiralight/vue-component-cli':
-        specifier: ^1.0.0
-        version: 1.0.0
+        specifier: ^1.0.1
+        version: 1.0.1
 
   apps/cms-changed:
     dependencies:
@@ -647,8 +647,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.9':
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==}
 
-  '@kiralight/vue-component-cli@1.0.0':
-    resolution: {integrity: sha512-4oWztADoH6Duqr6JsmFP7Vxb688wCxwN8zUxN81V7qtdnEux7E1SmjUAY3YgQ7gmKzSBLzkRAxHPp1GB+K2riQ==}
+  '@kiralight/vue-component-cli@1.0.1':
+    resolution: {integrity: sha512-685UvunCu1z/L7OjboWVO3q6AVre8i1MHgTdKZVhTqaQULVQ0dDToUIBvLIUrqKn/vPA+24y0MtpW+Tqdx8c8w==}
     hasBin: true
 
   '@manypkg/find-root@1.1.0':
@@ -3958,7 +3958,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@kiralight/vue-component-cli@1.0.0':
+  '@kiralight/vue-component-cli@1.0.1':
     dependencies:
       chalk: 4.1.2
       commander: 6.2.1

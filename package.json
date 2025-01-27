@@ -16,6 +16,6 @@
   "license": "ISC",
   "devDependencies": {
     "@changesets/cli": "^2.27.12",
-    "@kiralight/vue-component-cli": "^1.0.0"
+    "@kiralight/vue-component-cli": "^1.0.1"
   }
 }
