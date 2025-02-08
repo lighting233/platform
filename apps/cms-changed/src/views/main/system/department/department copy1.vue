@@ -5,11 +5,12 @@
       @query-click="handleQueryClick"
       :search-config="searchConfig"
     ></page-search>
-    <page-content
+    <page-content-colada
       ref="pageContentRef"
       @create-click="handleCreateClick"
       @edit-click="handleEditClick"
       :content-config="contentConfig"
+      :actions="actions"
     >
       <template #leader="scope">
         <span class="leader">{{ scope.row[scope.prop] }}</span>
@@ -17,25 +18,32 @@
       <template #parent="scope">
         <span class="parent">{{ scope.row[scope.prop] }}</span>
       </template>
-    </page-content>
+    </page-content-colada>
     <page-modal ref="pageModalRef" :modal-config="modalConfigRef"></page-modal>
   </div>
 </template>
 
 <script setup lang="ts" name="department">
-import pageSearch from '@/components/page-search/page-search.vue'
+// import pageSearch from '@/components/page-search/page-search.vue'
 import pageContent from '@/components/page-content/page-content.vue'
+import { PageContentColada }  from '@kiralight/utils'
 import pageModal from '@/components/page-modal/page-modal.vue'
 
 import searchConfig from './config/search.config'
 import contentConfig from './config/content.config'
 import modalConfig from './config/modal.config'
 
+import { postPageList, deletePage } from '@/service/main/system/system'
+
 import { computed } from 'vue'
 import useMainStore from '@/store/main/main'
 import usePageContent from '@/hooks/usePageContent'
 import usePageModal from '@/hooks/uaePageModal'
 
+const actions = {
+  postPageListData: postPageList,
+  deleteItem: deletePage
+}
 // 对 modalConfig 进行操作
 const modalConfigRef = computed(() => {
   // 获取部门和角色信息
